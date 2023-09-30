@@ -451,7 +451,7 @@ class Connection(object):
         self.onconnect = []
         self.event_handler = event_handler
         self.socket_handler = None
-        self.socket_handler_thread = None
+        self.socket_handler_thread = None # 以上都是 BLE socket 接口必要的参数。
         self.responses = []
         self.requests = []
         self.connect_requests = []
@@ -462,7 +462,7 @@ class Connection(object):
         self.peer_addresses_by_connection_handle = {}
         self.connected_addr_type_by_connection_handle = {}
         self.connection_mtus = {}
-        self.advertising = False
+        self.advertising = False # 可能是为了 区分 主机和 从机？？？？
         self.block = False
         self.mutex = mutex
         self.sec = None
